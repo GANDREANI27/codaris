@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Codaris — Agence Web</title>
+  <meta name="description" content="Codaris crée des sites modernes et animés qui convertissent."/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#hero" class="logo" aria-label="Codaris">
+        <img src="images/codaris-logo.png" alt="Codaris" class="logo__img">
+        <span class="logo__word">codaris</span>
+      </a>
+      <ul class="nav__links">
+        <li><a class="nav__link" href="#services">Services</a></li>
+        <li><a class="nav__link" href="#work">Nos travaux</a></li>
+        <li><a class="nav__link" href="#process">Process</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button id="themeToggle" class="btn ghost" aria-label="Mode jour/nuit">☀️ / 🌙</button>
+        <button id="langToggle" class="btn ghost" aria-label="FR/EN">FR / EN</button>
+        <a href="#contact" class="btn primary">Demander un devis</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero container">
+    <div class="tiles" aria-hidden="true"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">Des sites modernes, qui convertissent</h1>
+      <div class="hero__ctas">
+        <a href="#contact" class="btn primary big">Demander un devis</a>
+        <a href="#work" class="btn ghost big">Voir nos travaux</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <header class="section__head reveal">
+        <h2 class="section__title">Notre vision</h2>
+        <p class="section__kicker">
+          Nous concevons des expériences web rapides, élégantes et animées pour booster vos résultats.
+        </p>
+      </header>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Services</h2>
+        <p class="section__kicker">Du concept à la mise en ligne.</p>
+      </header>
+
+      <div class="grid four">
+        <article class="svc card reveal">
+          <h3>Design</h3>
+          <p>UI/UX, maquettes Figma, identité visuelle.</p>
+        </article>
+        <article class="svc card reveal">
+          <h3>Développement</h3>
+          <p>Sites vitrines rapides, e-commerce, animations.</p>
+        </article>
+        <article class="svc card reveal">
+          <h3>Motion</h3>
+          <p>Micro-interactions, transitions, carrousels fluides.</p>
+        </article>
+        <article class="svc card reveal">
+          <h3>Maintenance</h3>
+          <p>Mises à jour, optimisation, accompagnement.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Nos travaux</h2>
+        <p class="section__kicker">Sélection de projets en défilement continu.</p>
+      </header>
+
+      <div class="marquee reveal">
+        <div class="track" id="workTrack">
+          <a href="portfolio.html#isave" class="slide">
+            <div class="slide__img placeholder">iSave</div>
+            <div class="slide__txt">iSave — association engagée</div>
+          </a>
+          <a href="portfolio.html#blizzart" class="slide">
+            <div class="slide__img placeholder">Blizz’art</div>
+            <div class="slide__txt">Blizz’art — plateforme artistique</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="section">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Process</h2>
+        <p class="section__kicker">Un parcours clair, animé et efficace.</p>
+      </header>
+
+      <div class="timeline-h reveal" id="timeline">
+        <div class="tl-bar" aria-hidden="true"><span class="tl-progress"></span></div>
+        <ul class="tl-steps">
+          <li class="step"><span class="dot">1</span><span>Découverte</span></li>
+          <li class="step"><span class="dot">2</span><span>Design</span></li>
+          <li class="step"><span class="dot">3</span><span>Développement</span></li>
+          <li class="step"><span class="dot">4</span><span>Livraison</span></li>
+          <li class="step"><span class="dot">5</span><span>Suivi</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container grid two contact">
+      <div class="contact__panel reveal">
+        <h2 class="section__title">Contact</h2>
+        <p class="small">Réponse rapide sous 24h.</p>
+        <ul class="contact__list">
+          <li><a href="mailto:hello@codaris.agency">hello@codaris.agency</a></li>
+          <li><a href="tel:+33600000000">+33 6 00 00 00 00</a></li>
+        </ul>
+      </div>
+
+      <form id="contactForm" class="form reveal">
+        <div class="field">
+          <label for="name" class="small">Nom</label>
+          <input id="name" type="text" placeholder="Votre nom" required />
+        </div>
+        <div class="field">
+          <label for="email" class="small">Email</label>
+          <input id="email" type="email" placeholder="adresse@mail.com" required />
+        </div>
+        <div class="field">
+          <label for="message" class="small">Message</label>
+          <textarea id="message" rows="6" placeholder="Parlez-nous de votre projet" required></textarea>
+        </div>
+        <button class="btn primary" type="submit">Envoyer</button>
+        <p id="formStatus" class="small muted" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="small">© <span id="y"></span> Codaris</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    const $ = s => document.querySelector(s);
+    const $$ = s => document.querySelectorAll(s);
+
+    $('#y').textContent = new Date().getFullYear();
+
+    // ========== Mode jour/nuit ==========
+    const themeBtn = $('#themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.dataset.theme = savedTheme;
+
+    function toggleTheme() {
+      const current = document.documentElement.dataset.theme;
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('theme', next);
+    }
+    themeBtn.addEventListener('click', toggleTheme);
+
+    // ========== Reveal animation ==========
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    }, { threshold: 0.15 });
+    $$('.reveal').forEach(el => io.observe(el));
+
+    // ========== Tiles background ==========
+    (function initTiles(){
+      const wrap = document.querySelector('.tiles');
+      function build(){
+        wrap.innerHTML = '';
+        const size = parseInt(getComputedStyle(wrap).getPropertyValue('--size')) || 54;
+        const rect = wrap.getBoundingClientRect();
+        const cols = Math.ceil(rect.width / size);
+        const rows = Math.ceil(rect.height / size);
+        const frag = document.createDocumentFragment();
+        for(let i=0;i<cols*rows;i++){
+          const tile = document.createElement('div');
+          tile.className = 'tile';
+          tile.addEventListener('mousemove',(e)=>{
+            tile.style.setProperty('--mx', e.offsetX+'px');
+            tile.style.setProperty('--my', e.offsetY+'px');
+          });
+          frag.appendChild(tile);
+        }
+        wrap.appendChild(frag);
+      }
+      build();
+      window.addEventListener('resize', () => { clearTimeout(wrap._t); wrap._t=setTimeout(build,120); });
+    })();
+
+    // ========== Marquee ==========
+    (function marquee(){
+      const track = document.getElementById('workTrack');
+      track.innerHTML += track.innerHTML;
+      let x = 0, speed = 0.8, playing = true;
+      function step(){
+        if(playing){
+          x -= speed;
+          if(Math.abs(x) >= track.scrollWidth/2){ x = 0; }
+          track.style.transform = `translateX(${x}px)`;
+        }
+        requestAnimationFrame(step);
+      }
+      step();
+      track.addEventListener('mouseenter', ()=> playing=false);
+      track.addEventListener('mouseleave', ()=> playing=true);
+    })();
+
+    // ========== Timeline animation ==========
+    (function timeline(){
+      const tl = document.getElementById('timeline');
+      const progress = tl.querySelector('.tl-progress');
+      function update(){
+        const r = tl.getBoundingClientRect();
+        const viewport = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+        const visible = Math.min(1, Math.max(0, (viewport - r.top) / (viewport + r.height)));
+        progress.style.transform = `scaleX(${visible})`;
+      }
+      update();
+      window.addEventListener('scroll', update, {passive:true});
+    })();
+
+    // ========== EmailJS ==========
+    const EMAILJS_PUBLIC_KEY = "JlVPdGZfHPDni3Yyp";
+    const EMAILJS_SERVICE_ID = "service_a2gwgj2";
+    const EMAILJS_TEMPLATE_ID = "template_ijfo9ig";
+
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+
+    $('#contactForm').addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const status = $('#formStatus');
+      status.textContent = "Envoi...";
+      try{
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          from_name: $('#name').value,
+          reply_to: $('#email').value,
+          message: $('#message').value
+        });
+        status.textContent = "Message envoyé. Merci !";
+        e.target.reset();
+      }catch(err){
+        status.textContent = "Erreur d’envoi.";
+      }
+    });
+  </script>
+</body>
+</html>
